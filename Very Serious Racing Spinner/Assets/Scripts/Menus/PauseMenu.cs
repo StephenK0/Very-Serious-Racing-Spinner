@@ -3,11 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
-
-    public void PauseAndResumeGame()
+    public void ResumeGame()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(StaticData.pausedLevelName);
     }
 
     // TODO: sound/music functionality.
