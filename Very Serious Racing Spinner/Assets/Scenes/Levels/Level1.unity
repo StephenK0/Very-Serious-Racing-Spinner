@@ -697,7 +697,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1479382023}
         m_TargetAssemblyTypeName: LevelNavigation, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NavigateToLevelFailedScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
