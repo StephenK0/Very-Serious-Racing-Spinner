@@ -1,0 +1,8 @@
+This is just a little text file where I keep track of trying to solve the problem of the car spinning/sinking into the floor. 
+
+- When I lower the mass of the main rigidbody, it seems to bounce and spin like crazy rather than sink into the ground and spin like crazy. 
+- It becomes perfectly stable if I just add a box collider to the root of the car prefab. The wheels even touch the ground right and everything, and continue to spin against the ground as the car slides. 
+  - I might just leave it like this. Yes, there's a risk of using a solution that you don't fully understand, but I think that for now it's stable enough. 
+  - Incredibly, this seems to be work even when the collider is set as a trigger. However, this only seems to work if the car is already stable. If I try to set the collider to be a trigger at the start of the scene, it still bounces (even if the scene starts with it touching the ground perfectly). However, if the scene begins with a true collider and then switched to a trigger, it will remain stable. 
+    - Unfortunately, setting it back to a collider from a (stable) trigger, it will also bounce uncontrollably. 
+  - Even when dropped at various angles from a high distance, it seems to remain stable. Also if it starts with its wheels clipped into the ground. When the body is clipped into the ground, it bounces a bit, but recovers and doesn't go completely crazy
