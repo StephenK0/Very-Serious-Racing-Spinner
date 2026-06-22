@@ -78,6 +78,76 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ee8fd79600a23f14c919c0b921eb876c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a864a6ac5b7aca4b9f3839094c00e04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6511623378013710311}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a864a6ac5b7aca4b9f3839094c00e04, type: 3}
+--- !u!4 &7882523783246850686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a864a6ac5b7aca4b9f3839094c00e04, type: 3}
+  m_PrefabInstance: {fileID: 7705343279906311573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8826478301511995301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7882523783246850686}
+    m_Modifications:
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128819881655563000, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+      propertyPath: m_Name
+      value: Spinning circular disks
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+--- !u!4 &6511623378013710311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2314882877985269826, guid: e005359046d8cc94db9632e62a8a76f6, type: 3}
+  m_PrefabInstance: {fileID: 8826478301511995301}
+  m_PrefabAsset: {fileID: 0}
