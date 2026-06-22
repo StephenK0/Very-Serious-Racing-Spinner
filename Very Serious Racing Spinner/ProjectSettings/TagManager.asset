@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - SlowDownObstacle
+  - BlockPathObstacle
   layers:
   - Default
   - TransparentFX

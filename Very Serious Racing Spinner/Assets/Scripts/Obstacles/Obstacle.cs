@@ -3,7 +3,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     [SerializeField] string playerTag = "Player";
-    [SerializeField] float slowDownFraction = 0.5f;
+    [SerializeField] float slowDownFraction = 0.25f;
 
     // Slow down the player if the player collides with a "SlowDownObstacle".
     private void OnTriggerEnter(Collider other)
