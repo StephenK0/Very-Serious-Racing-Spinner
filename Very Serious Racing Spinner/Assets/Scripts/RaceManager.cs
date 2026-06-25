@@ -6,6 +6,7 @@ public class RaceManager : MonoBehaviour
   string next;
   bool isFL;
   public static RaceManager main;
+  int timer = 0;
   [SerializeField] LevelNavigation navigator;
   [SerializeField] Checkpoint starting;
 
@@ -16,8 +17,13 @@ public class RaceManager : MonoBehaviour
     if(main == null) main = this;
     else {
       Debug.Log("Race Manager already exists. Destroying this!");
+      Destroy(this);
     }
     TryMoveCheckpoint(starting);
+  }
+
+  void FixedUpdate() {
+    timer++;
   }
 
   public void TryMoveCheckpoint(Checkpoint other) {
@@ -62,6 +68,7 @@ public class RaceManager : MonoBehaviour
 
     if(won) {
 	    Debug.Log("You won!");
+	    LeaderboardCalculator.mostRecentScore = timer;
 	    navigator.NavigateToLevelCompleteScene();
     }
     else {
