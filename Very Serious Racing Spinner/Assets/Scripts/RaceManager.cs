@@ -24,7 +24,7 @@ public class RaceManager
       if(other.FinishLine) AddLaps(1);
       SetCurrent(other);
     }
-    else return;
+    else return; //Remove this line when you remove the Debug.Log statement directly after it. 
     Debug.Log("lap " + lap + " at checkpoint " + current);
   }
 
