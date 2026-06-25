@@ -8,6 +8,8 @@ TagManager:
   - Ring2
   - Ring3
   - Ring4
+  - SlowDownObstacle
+  - BlockPathObstacle
   layers:
   - Default
   - TransparentFX
