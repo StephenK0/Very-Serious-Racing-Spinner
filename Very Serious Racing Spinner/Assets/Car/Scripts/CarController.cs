@@ -8,7 +8,8 @@ public class CarController : MonoBehaviour
   [SerializeField] List<WheelCollider> motorWheels; //The wheels to apply motor driving to. 
   [SerializeField] List<WheelCollider> brakeWheels; //The wheels to apply braking to. 
 
-  [SerializeField] float maxMotorSpeed = 300000;
+  // NOTE: had to change the maxMotorSpeed to public to slow down the car whenever it collides with a SlowDown obstacle.
+  public float maxMotorSpeed = 300000;
   [SerializeField] float minMotorSpeed = -20000;
   [SerializeField] float deltaMotorTorque = 10000;
   [SerializeField] float deltaBrakeTorque = 10000;
