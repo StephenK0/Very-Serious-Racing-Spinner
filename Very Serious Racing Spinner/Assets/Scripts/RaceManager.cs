@@ -1,34 +1,45 @@
 using UnityEngine;
 
-public class RaceManager 
+public class RaceManager : MonoBehaviour
 {
-  static string current;
-  static string next;
-  static bool isFL;
+  string current;
+  string next;
+  bool isFL;
+  public static RaceManager main;
+  [SerializeField] LevelNavigation navigator;
+  [SerializeField] Checkpoint starting;
 
   const int LAPS_IN_RACE = 3;
 
-  static int lap = 1; //One-indexed. Not zero-indexed. Race ends when you reach the end of lap 3, where lap 4 would begin. 
+  int lap = 1; //One-indexed. Not zero-indexed. Race ends when you reach the end of lap 3, where lap 4 would begin. 
+  void Start() {
+    if(main == null) main = this;
+    else {
+      Debug.Log("Race Manager already exists. Destroying this!");
+    }
+    TryMoveCheckpoint(starting);
+  }
 
-  public static void TryMoveCheckpoint(Checkpoint other) {
+  public void TryMoveCheckpoint(Checkpoint other) {
+    Debug.Log("Reaching checkpoint " + other.Name);
     if(current == null) {
-      SetCurrent(other);
+      SetCheckpoint(other);
       return; //When you go through the finish line for the first time at the start of the race, it won't count as a lap. 
     }
 
     if(other.Next == current) { //If this is the previous checkpoint, move backwards. 
       if(isFL) AddLaps(-1);
-      SetCurrent(other);
+      SetCheckpoint(other);
     }
     else if(other.name == next) { //If this is the next checkpoint, move forwards. 
       if(other.FinishLine) AddLaps(1);
-      SetCurrent(other);
+      SetCheckpoint(other);
     }
     else return; //Remove this line when you remove the Debug.Log statement directly after it. 
     Debug.Log("lap " + lap + " at checkpoint " + current);
   }
 
-  private static void AddLaps(int howMany = 1) {
+  private void AddLaps(int howMany = 1) {
     lap += howMany;
 
     if(lap > LAPS_IN_RACE) {
@@ -36,14 +47,14 @@ public class RaceManager
     }
   }
 
-  private static void SetCurrent(Checkpoint other) {
+  private void SetCheckpoint(Checkpoint other) {
     current = other.Name;
     next = other.Next;
     isFL = other.FinishLine;
   }
 
   //TODO!!
-  private static void EndRace(bool won = true) {
+  private void EndRace(bool won = true) {
     current = null;
     next = null;
     isFL = false;
@@ -51,9 +62,11 @@ public class RaceManager
 
     if(won) {
 	    Debug.Log("You won!");
+	    navigator.NavigateToLevelCompleteScene();
     }
     else {
 	    Debug.Log("You lost!");
+	    navigator.NavigateToLevelFailedScene();
     }
   }
 }
