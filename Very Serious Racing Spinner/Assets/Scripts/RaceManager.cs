@@ -10,7 +10,7 @@ public class RaceManager : MonoBehaviour
   [SerializeField] LevelNavigation navigator;
   [SerializeField] Checkpoint starting;
 
-  const int LAPS_IN_RACE = 3;
+  const int LAPS_IN_RACE = 1;
 
   int lap = 1; //One-indexed. Not zero-indexed. Race ends when you reach the end of lap 3, where lap 4 would begin. 
   void Start() {

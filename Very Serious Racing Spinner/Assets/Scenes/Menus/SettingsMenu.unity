@@ -709,13 +709,13 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Press WASD or arrow keys to control your car around a rotating track.
-    Complete three laps in the fastest time possible!
+    Complete a lap in the fastest time possible!
 
 
-    Red obstacles slow you
-    down.
+    Red obstacles slow you down.
 
-    Black obstacles cannot be passed through.'
+    Black
+    obstacles cannot be passed through.'
 --- !u!222 &805918379
 CanvasRenderer:
   m_ObjectHideFlags: 0
