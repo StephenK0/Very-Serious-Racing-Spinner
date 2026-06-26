@@ -9,7 +9,9 @@ public class CarController : MonoBehaviour
   [SerializeField] List<WheelCollider> brakeWheels; //The wheels to apply braking to. 
 
   // NOTE: had to change the maxMotorSpeed to public to slow down the car whenever it collides with a SlowDown obstacle.
-  public float maxMotorSpeed = 300000;
+
+  public int Slowdown;
+  [SerializeField] float maxMotorSpeed = 300000;
   [SerializeField] float minMotorSpeed = -20000;
   [SerializeField] float deltaMotorTorque = 10000;
   [SerializeField] float deltaBrakeTorque = 10000;
@@ -21,13 +23,19 @@ public class CarController : MonoBehaviour
   float motorAxis;
   float steerAxis;
   bool isBraking;
+  bool isSlow;
 
   float effectiveMotorAxis;
   
   void Update() {
+    if(Slowdown > 0) {
+      Slowdown--;
+      isSlow = true;
+    }
+    else isSlow = false;
 
     //Apply braking (or lack thereof). 
-    if(isBraking) {
+    if(isBraking || isSlow) {
       effectiveMotorAxis = 0;
       foreach(WheelCollider wheel in brakeWheels) {
         wheel.brakeTorque = deltaBrakeTorque;
