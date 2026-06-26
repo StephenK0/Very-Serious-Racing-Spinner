@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
 
   void OnTriggerEnter(Collider other) {
     if(other.gameObject.tag == PLAYER_TAG_NAME) {
-      RaceManager.TryMoveCheckpoint(this);
+      RaceManager.main.TryMoveCheckpoint(this);
       Debug.Log("Reached Checkpoint: " + Name);
     }
   }
