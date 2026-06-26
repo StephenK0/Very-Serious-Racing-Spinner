@@ -11,10 +11,11 @@ public class CarController : MonoBehaviour
   // NOTE: had to change the maxMotorSpeed to public to slow down the car whenever it collides with a SlowDown obstacle.
 
   public int Slowdown;
-  [SerializeField] float maxMotorSpeed = 300000;
-  [SerializeField] float minMotorSpeed = -20000;
-  [SerializeField] float deltaMotorTorque = 10000;
-  [SerializeField] float deltaBrakeTorque = 10000;
+  [SerializeField] public float maxMotorSpeed { get; private set; } = 300000;
+  [SerializeField] public float minMotorSpeed { get; private set; } = -20000;
+  float deltaMotorTorque = 10000;
+  float deltaBrakeTorque = 10000;
+  [SerializeField] public float currentSpeed { get; private set; } //Calculated as an average of the motor wheel speeds. 
 
   [SerializeField] float deltaSteer = 0.5f; //How quickly the steering wheels change direction. 
   [SerializeField] float maxSteer = 10; //The maximum range they can turn. 
@@ -49,13 +50,16 @@ public class CarController : MonoBehaviour
     }
 
     
-    //Apply motors
+    //Apply motors and calculate average wheel speed
+    currentSpeed = 0;
     foreach(WheelCollider wheel in motorWheels) {
       wheel.motorTorque = motorAxis * deltaMotorTorque;
       wheel.rotationSpeed = Mathf.Max(wheel.rotationSpeed, minMotorSpeed);
       wheel.rotationSpeed = Mathf.Min(wheel.rotationSpeed, maxMotorSpeed);
-      Debug.Log(wheel.rotationSpeed);
+      currentSpeed += wheel.rotationSpeed;
     }
+    currentSpeed /= motorWheels.Count;
+    Debug.Log(currentSpeed);
 
     //Calculate steering. 
     if(steerAxis == 0) {

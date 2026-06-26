@@ -254,6 +254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 409864784}
     m_Modifications:
+    - target: {fileID: 1918645067922487670, guid: c6c23467260f9bd4c9da24865ca11062, type: 3}
+      propertyPath: FinishLine
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3238929712648929222, guid: c6c23467260f9bd4c9da24865ca11062, type: 3}
       propertyPath: m_LocalScale.y
       value: 5
@@ -306,7 +310,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckpointB
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6021518732450870617, guid: c6c23467260f9bd4c9da24865ca11062, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2362,6 +2367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckpointC
       objectReference: {fileID: 0}
+    - target: {fileID: 2892663248100814780, guid: 7a1f6223418691646a3308b416f026e9, type: 3}
+      propertyPath: FinishLine
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8419137995446945362, guid: 7a1f6223418691646a3308b416f026e9, type: 3}
       propertyPath: m_LocalScale.y
       value: 5
@@ -2410,7 +2419,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7765713494966959867, guid: 7a1f6223418691646a3308b416f026e9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4065,6 +4075,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3381598599568365479, guid: 20232d4c7ef285743afe80d586dcca55, type: 3}
   m_PrefabInstance: {fileID: 369244095}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1325183324
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -138.24222
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.80217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.174337
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403560394275101296, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940466477218411727, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: m_Name
+      value: Drivable Car (Third Person Close) stable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462551849666510399, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
+      propertyPath: starting
+      value: 
+      objectReference: {fileID: 207465957}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 829bc3ee1903d944e988d122bdaa9459, type: 3}
 --- !u!1 &1326969860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,7 +5478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373782131841653270, guid: 83d318a771371ca449727591117a02a4, type: 3}
       propertyPath: FinishLine
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5486,6 +5557,10 @@ PrefabInstance:
     - target: {fileID: 8940995413827157092, guid: de98a0fbc7727f144b9a59ce3abea072, type: 3}
       propertyPath: m_Name
       value: Drivable Car (Third Person Close)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940995413827157092, guid: de98a0fbc7727f144b9a59ce3abea072, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8940995413827157092, guid: de98a0fbc7727f144b9a59ce3abea072, type: 3}
       propertyPath: m_TagString
@@ -5756,9 +5831,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7413909623327683554, guid: c4cc5d25f32de0d4ba1d6befbdeceeff, type: 3}
       propertyPath: FinishLine
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2417860836284881394, guid: c4cc5d25f32de0d4ba1d6befbdeceeff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6846,3 +6922,4 @@ SceneRoots:
   - {fileID: 1213013519}
   - {fileID: 1373278011}
   - {fileID: 1787016769}
+  - {fileID: 1325183324}
