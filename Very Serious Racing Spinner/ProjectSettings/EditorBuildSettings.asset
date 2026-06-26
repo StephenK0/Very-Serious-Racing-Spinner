@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level1.unity
     guid: bc3a6e542ee13854f92e1781e8406eef
   - enabled: 1
-    path: Assets/Scenes/Levels/Level2.unity
+    path: Assets/Scenes/Levels/Level2Extra.unity
     guid: b6f4b2562a3b88448a7d8be502876ca1
   - enabled: 1
     path: Assets/Scenes/Car Test.unity
