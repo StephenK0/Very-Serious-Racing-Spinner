@@ -7,6 +7,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackButton()
     {
+	StaticData.currentLevel = 1; //Whenever you return to the main menu, set the level to 1. This is because we reuse this script for the button to return to main menu from the end of the game. 
         SceneManager.LoadScene(sceneName);
     }
 
